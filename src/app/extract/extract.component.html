@@ -1,6 +1,15 @@
-<div *ngFor="let transfer of transfers">
-  <p>Data: {{ transfer.date || 'Não informado' }}</p>
-  <p>Valor: {{ transfer.value }}</p>
-  <p>Destino: {{ transfer.destination }}</p>
-  <hr>
-</div>
+<table>
+  <thead>
+    <th>Data</th>
+    <th>Valor</th>
+    <th>Destino</th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let transfer of transfers">
+      <td>{{ transfer.date ? (transfer.date  | date: "short") : "Não informado" }}</td>
+      <td>{{ transfer.value | currency }}</td>
+      <td>{{ transfer.destination }}</td>
+    </tr>
+  </tbody>
+</table>
