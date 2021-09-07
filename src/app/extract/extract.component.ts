@@ -1,3 +1,4 @@
+import { TransfersService } from './../services/transfers.service';
 import { ITransfer } from './../interfaces/transfer.interface';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -7,10 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./extract.component.scss']
 })
 export class ExtractComponent implements OnInit {
-  @Input() transfers: ITransfer[];
+ transfers: ITransfer[];
 
-  constructor() { }
+  constructor(private transfersService: TransfersService) {}
 
   ngOnInit(): void {
+    this.transfers = this.transfersService.transfers;
   }
 }
