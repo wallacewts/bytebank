@@ -7,14 +7,16 @@ import { Component, EventEmitter, Output } from "@angular/core";
   styleUrls: ['./new-transfer.component.scss']
 })
 export class NewTransferComponent {
-  @Output()  aoTransferir = new EventEmitter<ITransfer>();
+  @Output()  transferEvent = new EventEmitter<ITransfer>();
 
   transfer: ITransfer = {
     destination: 0,
     value: 0
   };
 
-  transferir() {
-    this.aoTransferir.emit(this.transfer);
+  emiTransfer(): void {
+    const newTrasnfer: ITransfer = {...this.transfer};
+
+    this.transferEvent.emit(newTrasnfer);
   }
 }
