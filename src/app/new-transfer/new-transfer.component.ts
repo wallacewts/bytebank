@@ -18,5 +18,10 @@ export class NewTransferComponent {
     const newTrasnfer: ITransfer = {...this.transfer};
 
     this.transferEvent.emit(newTrasnfer);
+    this.clearFields();
+  }
+
+  clearFields(): void {
+    this.transfer = {destination: 0, value: 0};
   }
 }
