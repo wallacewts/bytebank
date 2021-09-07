@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ITransfer } from './../interfaces/transfer.interface';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-extract',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./extract.component.scss']
 })
 export class ExtractComponent implements OnInit {
+  @Input() transfer: ITransfer;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }
