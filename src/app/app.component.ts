@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  transfer: ITransfer;
+  transfers: ITransfer[] = [];
 
   transferListenner(transfer: ITransfer) {
-    this.transfer = transfer;
+    this.transfers.push(transfer);
   }
 }

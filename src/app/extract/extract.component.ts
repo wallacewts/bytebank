@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./extract.component.scss']
 })
 export class ExtractComponent implements OnInit {
-  @Input() transfer: ITransfer;
+  @Input() transfers: ITransfer[];
 
   constructor() { }
 
