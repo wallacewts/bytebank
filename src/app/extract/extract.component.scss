@@ -34,4 +34,10 @@
     padding: 10px;
     border-bottom: 1px solid var(--cinza-claro);
   }
+
+  .empty-list {
+    td {
+      padding: 2rem;
+    }
+  }
 }
