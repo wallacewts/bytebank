@@ -1,4 +1,5 @@
 <div *ngFor="let transfer of transfers">
+  <p>Data: {{ transfer.date || 'Não informado' }}</p>
   <p>Valor: {{ transfer.value }}</p>
   <p>Destino: {{ transfer.destination }}</p>
   <hr>

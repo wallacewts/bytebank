@@ -9,7 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   transfers: ITransfer[] = [];
 
-  transferListenner(transfer: ITransfer) {
-    this.transfers.push(transfer);
+  transferListenner({destination, value}: ITransfer) {
+    const newTransfer = { destination, value, date: new Date() };
+    this.transfers.push(newTransfer);
   }
 }
